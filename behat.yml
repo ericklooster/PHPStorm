@@ -1,0 +1,20 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            base_url: https://www.google.nl
+            goutte: ~
+            selenium2: ~
+            browser_name: chrome
+        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+            name: html
+            renderer: Twig,Behat2
+            file_name: index
+            print_args: true
+            print_outp: true
+            loop_break: true
+    formatters:
+        html:
+            output_path: %paths.base%/html-rapport
+
+
+
